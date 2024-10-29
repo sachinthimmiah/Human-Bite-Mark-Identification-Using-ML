@@ -1,0 +1,275 @@
+.Container{
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  height: 100vh;
+}
+
+.DAD {
+ height: 45rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+  /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+ 
+  position: relative; /* Ensure relative positioning */
+}
+
+
+ .drag-and-drop {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+ 
+  .sidebar-2{
+    display: none;
+  }
+ 
+
+
+
+
+.circle{
+  background-image: linear-gradient(120deg, #ede3f9 0%, #ffffff 100%);
+}
+
+.circle1{
+  /* background-image:  linear-gradient(120deg, #ffffff 0%, #ffffff 100%); */
+  background-image: linear-gradient(45deg, #fc6368 0%, #fad0c4 99%, #fad0c4 100%);
+ 
+  animation: one 15s infinite ease-in;
+  
+}
+
+@keyframes one{
+0%{
+  right: 3%;
+  top: 5%;
+}
+
+25%{
+  right: 8%;
+  top: 3%;
+}
+50%{
+  right: 12%;
+  top: 1%;
+}
+
+60%{
+right: 20%;
+top: 5%;
+}
+
+75%{
+  right: 25%;
+  top: 3%;
+}
+
+
+90%{
+  right: 15%;
+}
+
+100%{
+  right: 5%;
+  top: 5%;
+}
+
+}
+
+.drop-zone, .empty-zone {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 2px dashed #6c6ff7;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  padding: 2rem;
+  text-align: center;
+  background: #f5f2f2;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  }
+
+  .empty-zone{
+    justify-content: flex-start !important;
+    margin: 20px;
+   
+  }
+
+.drop-zone h1, .empty-zone h1 {
+ color: #705dfb ;
+ font-size: 1.2em;
+ font-weight: 600;
+ height: 3rem;
+ text-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+
+.file-input-container {
+  
+  align-content: center;
+  height: 3rem;
+  
+}
+
+.choose-files-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    height: 45px;
+    border: none;
+    padding: 0px 15px;
+    border-radius: 8px;
+    background-color: #d7d0fe;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  }
+
+  .folderContainer {
+    width: 40px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .fileBack {
+    z-index: 1;
+    width: 90%;
+    height: auto;
+  }
+  .filePage {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    transition: all 0.2s ease-out;
+  }
+  .fileFront {
+    width: 90%;
+    height: auto;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.95;
+    transform-origin: bottom;
+    transition: all 0.3s ease-out;
+  }
+  .text {
+    color: rgb(30, 29, 29);
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+ .choose-files-button:hover .filePage {
+    transform: translateY(-6px);
+  }
+  .choose-files-button:hover {
+    background-color: #e4dffd;
+
+  }
+  .choose-files-button:hover .fileFront {
+    transform: rotateX(30deg);
+  }
+  
+
+
+
+.file-input-container input[type="file"] {
+  display: none;
+}
+
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  border-radius:  6px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.preview-image {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+
+@media (max-width:640px) {
+  .Container{
+   display: block;
+   overflow: hidden;
+  }
+  
+  .DAD{
+    height: 40rem;
+  }
+
+   .drop-zone, .empty-zone{
+      width: fit-content;
+      margin:0 20px 0 20px ;
+      height: 55%;
+  }
+  .drop-zone{
+   height: 300px;
+  }
+
+  .image-preview {
+      margin: 2px;
+  }
+  .preview-image{
+      max-width: 150px;
+      max-height: 150px;
+  }
+
+  .file-input-container {
+      transform: scale(0.7);
+  }
+
+
+  .drop-zone h1, .empty-zone h1 {
+    font-size: 0.8rem;
+  }
+  
+
+}
+
+@media  (max-width:1024px) and (min-width:640px) {
+
+  .DAD{
+    height: 40rem;
+  }
+
+  .drop-zone, .empty-zone{  
+    width: fit-content;
+    margin:20px 20px 0 20px ;
+    height: 70%;
+    
+}
+.drop-zone{
+  height: 400px !important;
+}
+.preview-image{
+  max-width: 150px;
+  max-height: 200px;
+
+}
+
+}
+

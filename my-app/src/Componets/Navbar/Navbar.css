@@ -1,0 +1,58 @@
+
+@media (max-width:640px) {
+    aside{
+        position: absolute;
+        z-index:  999;
+        width: 100vw !important;
+    }
+  
+
+    ul{
+        justify-content: space-between !important;
+        
+    }
+
+    .nav1{
+        display: block;
+    }
+
+    .nav2{
+        display: none;
+     }
+   
+
+}
+
+@media (max-width:1024px) and  (min-width:640px) {
+    aside{
+        justify-content: space-between !important;
+        flex-direction: row !important;
+        position: absolute;
+        z-index:  999;
+        width: 30vw !important;
+    }
+
+    .nav1{
+        display: block;
+    }
+     .nav2{
+        display: none;
+     }
+   
+}
+
+@media (min-width:1025px) {
+  
+    .cross{
+        display: none;
+    }
+
+    .nav1{
+        display: none;
+    }
+
+    .nav2{
+        display: flex;
+    }
+
+}
